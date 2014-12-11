@@ -2,7 +2,7 @@ module.exports = {
     sassDir:          'scss/',
     sassMainFileName: 'style',
     cssDir:           'css/',
-    cssMainFileDir:   'scss/',
+    cssMainFileDir:   'css/',
     cssMainFileName:  'style',
     jsDir:            'js/',
     imgDir:           'images/',

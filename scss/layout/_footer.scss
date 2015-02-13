@@ -94,12 +94,12 @@
 
     @mixin footer-social-icon($class, $y, $height: 13) {
         .links.social-media em.#{$class} {
-            background-position: 0 -#{$y}px;
+            background-position: 0 #{-$y}px;
             height: #{$height}px;
         }
 
         .links.social-media a:hover em.#{$class} {
-            background-position: -25px -#{$y}px;
+            background-position: -25px #{-$y}px;
         }
     }
 

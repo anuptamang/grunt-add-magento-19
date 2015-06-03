@@ -1,4 +1,3 @@
-
 /* ============================================ *
  * Header - Cart
  * ============================================ */
@@ -25,9 +24,6 @@
 @include bp(min-width, $bp-medium + 1) {
 
     .skip-cart {
-        position: absolute;
-        top: 0;
-        right: 0;
         width: auto;
         padding: 0 10px;
     }
@@ -53,7 +49,7 @@
  */
 
 .skip-cart .count {
-    border-radius: 12px;
+    @include border-radius(12px);
     display: inline-block;
     top: -6px;
     position: relative;
@@ -95,12 +91,12 @@
         }
 
         .count {
-            border-radius: 0;
-            color: $c-action;
+            @include border-radius(0px);
             position: static;
             background: none;
             margin-left: 0px;
             font-size: $f-size;
+            width: auto;
 
             &:before {
                 content: '(';
@@ -109,6 +105,10 @@
                 content: ')';
             }
         }
+    }
+    .skip-cart .count,
+    .skip-link.skip-active .count {
+        color: $c-action;
     }
 }
 

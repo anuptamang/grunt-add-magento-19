@@ -1,4 +1,3 @@
-
 /* ============================================ *
  * Header - Account
  * ============================================ */
@@ -26,10 +25,10 @@
 @include bp(min-width, $bp-medium + 1) {
 
     .skip-account {
-        position: absolute;
-        top: 0;
-        right: 115px;
+        float: none;
         width: auto;
+        vertical-align: top;
+        display: inline-block;
         padding: 0 10px;
         text-transform: uppercase;
     }
@@ -68,13 +67,11 @@
     padding: 5px 0;
 }
 
-//#header-account li { }
-
 #header-account a {
     position: relative;
     display: block;
-    padding: 0 10px;
-    line-height: 33px;
+    padding: 5px 10px;
+    line-height:23px;
     text-align: center;
 }
 

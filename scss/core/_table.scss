@@ -1,4 +1,3 @@
-
 /* ============================================ *
  * Table Helpers
  * ============================================ */
@@ -50,6 +49,35 @@
     dt:after {
         content: ':';
     }
+}
+
+/* ============================================ *
+ * Generic Info Table
+ * ============================================ */
+
+.info-box {
+    border: 1px solid $c-table-border;
+    padding: 12px 15px;
+    margin: 0 0 15px;
+
+    h2 {
+        font-weight: bold;
+        font-size: 13px;
+    }
+}
+
+.info-table th,
+.info-table td {
+    vertical-align: top;
+}
+
+.info-table th {
+    font-weight: bold;
+    padding: 4px 20px 4px 0;
+}
+
+.info-table td {
+    padding: 4px 0;
 }
 
 /* ============================================ *
@@ -187,17 +215,12 @@
     .linearize-table {
         @include linearize-table;
     }
-	.data-table td,
-	.data-table th {
-	    padding: 3px;
-	}
 }
 
 @include bp(max-width, $bp-small) {
     .linearize-table-large {
         @include linearize-table;
     }
-	
 }
 
 @include bp(min-width, $bp-small + 1) {

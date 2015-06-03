@@ -1,12 +1,22 @@
-
 /* ============================================ *
  * Checkout - Mini cart
  * ============================================ */
 
 .header-minicart {
+    display: inline-block;
+
+    @include bp(max-width, $bp-medium) {
+        display: block;
+    }
+
     .minicart-message {
         display: block;
         padding: $box-spacing;
+    }
+
+    .empty {
+        padding: $box-spacing;
+        text-align: center;
     }
 
     .minicart-wrapper {
@@ -95,7 +105,9 @@
             padding-left: 4px;
             padding-right: 4px;
             margin-right: 2px;
-            width:30px;
+            width: 3.2em;
+            text-align: center;
+            height: 30px;
         }
 
         .quantity-button {
@@ -133,6 +145,7 @@
         margin-top: 0px;
         overflow: hidden;
         position: relative;
+        text-align: center;
 
         .checkout-button {
             min-width: 145px;
@@ -142,11 +155,7 @@
             height: 33px;
             line-height: 39px;
             text-transform: uppercase;
-            display: block;
             font-size: $f-size-s;
-            left: $box-spacing;
-            bottom: 17px;
-            position: absolute;
         }
 
         .paypal-logo {
@@ -178,6 +187,13 @@
 .header-minicart.skip-active .block-cart,
 .block-cart.skip-active {
     display: block;
+}
+
+@include bp(min-width, $bp-medium + 1) {
+    .checkout-types.minicart {
+        float: none;
+        text-align: center;
+    }
 }
 
 @include bp(max-width, $bp-xsmall) {
@@ -217,7 +233,7 @@
             .cart-link {
                 bottom: 0;
                 right: $box-spacing;
-                left: auto;
+                position: absolute;
             }
 
             .checkout-types.minicart {
@@ -248,13 +264,9 @@
     }
 }
 
-@include bp(max-width, 670px) {
+@include bp(max-width, 740px) {
     .header-minicart {
         .minicart-actions {
-            .checkout-button {
-                width: 100%;
-            }
-
             .cart-link {
                 right: auto;
                 left: 0;
@@ -277,6 +289,16 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@include bp(max-width, $bp-small) {
+    .header-minicart {
+        .minicart-actions {
+            .checkout-button {
+                width: 100%;
             }
         }
     }

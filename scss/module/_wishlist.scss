@@ -1,4 +1,3 @@
-
 /* ============================================ *
  * Wishlist
  * ============================================ */
@@ -49,9 +48,8 @@
 
     textarea {
         border: 1px solid $c-input-border;
-        width: 100% !important;
+        width: 100%;
         height: 45px;
-		min-height:40px;
         font-size: $f-size-xxs;
         font-family: $f-stack-special;
 
@@ -75,10 +73,10 @@
 
     .item-manage {
         text-align: right;
+        max-width: 450px;
         padding-top: 5px;
 
         .button {
-            color: #FFFFFF;
             font-size: $f-size-xxs;
             padding: 3px 5px;
         }
@@ -132,6 +130,12 @@
         &.customer-wishlist-item-remove {
             width: 20px;
         }
+
+        .button,
+        button {
+            white-space: normal;
+        }
+
     }
 
     .price-box {
@@ -162,6 +166,10 @@
             background: none;
             color: $c-action;
         }
+    }
+
+    td[data-rwd-label]:before {
+        font-weight: 600;
     }
 }
 
@@ -269,9 +277,6 @@
             display: none;
         }
     }
-	.my-wishlist{
-		.buttons-set button.button{margin-bottom:5px;}
-	}
 }
 
 // ---------------------------------------------

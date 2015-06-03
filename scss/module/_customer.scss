@@ -1,4 +1,3 @@
-
 /* ============================================ *
  * Customer
  * ============================================ */
@@ -237,6 +236,24 @@ body.customer-account {
                 font-size: $f-size-s;
             }
         }
+
+        span.nobr {
+            white-space: normal;
+
+            a {
+                white-space: nowrap;
+            }
+        }
+
+        td.view {
+            a {
+                display: block;
+            }
+        }
+
+        .separator {
+            display: none;
+        }
     }
 
     .sidebar {
@@ -372,10 +389,6 @@ body.customer-account {
                 }
 
                 a {
-                    position: absolute;
-                    top: -#{$box-spacing};
-                    right: -#{$box-spacing};
-                    padding: $box-spacing;
                     line-height: (1.4 * $f-size);
                 }
             }
@@ -678,6 +691,14 @@ ol#cart-sidebar-reorder {
             }
         }
     }
+
+    body.customer-account {
+        .data-table {
+            td.view a {
+                white-space: normal;
+            }
+        }
+    }
 }
 
 @include bp(max-width, $bp-large) {
@@ -693,42 +714,18 @@ ol#cart-sidebar-reorder {
             }
         }
     }
-
-    .data-table {
-        span.nobr {
-            white-space: normal;
-
-            a {
-                white-space: nowrap;
-            }
-        }
-
-        .separator {
-            display: none;
-        }
-    }
-
-    .dashboard {
-        .col2-set {
-            .col-1,
-            .col-2 {
-                .box-title {
-                    a {
-                        position: static;
-                        padding: 0;
-                    }
-                }
-            }
-        }
-    }
 }
 
 @include bp(max-width, $bp-medium) {
     body.customer-account {
         .data-table {
-            &.orders th.ship,
-            &.orders td.ship {
-                display: none;
+            &.orders {
+                th.ship,
+                td.ship,
+                td.status,
+                th.status {
+                    display: none;
+                }
             }
         }
     }
@@ -807,17 +804,6 @@ ol#cart-sidebar-reorder {
     }
 }
 
-@include bp(max-width, 530px) {
-    .data-table {
-        &.orders {
-            td.status,
-            th.status {
-                display: none;
-            }
-        }
-    }
-}
-
 @include bp(max-width, $bp-xsmall) {
     body.customer-account {
         .my-account {
@@ -834,6 +820,10 @@ ol#cart-sidebar-reorder {
                     width: 100%;
                     position: static;
                     margin-bottom: $trim-small;
+
+                    + .button {
+                        margin-left: 0px;
+                    }
                 }
             }
 
@@ -889,13 +879,6 @@ ol#cart-sidebar-reorder {
             .col-2 {
                 width: 100%;
                 margin-top: $trim-small;
-
-                .box-title {
-                    a {
-                        position: absolute;
-                        padding: $box-spacing;
-                    }
-                }
             }
         }
     }

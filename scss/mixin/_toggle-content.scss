@@ -89,6 +89,10 @@
         top: 50%;
         margin-top: -3px;
     }
+
+    &:hover {
+        background-color: $c-module-background-hover;
+    }
 }
 
 @mixin accordion() {

@@ -171,7 +171,7 @@ body:not(.customer-account) .block:first-child .block-title {
 }
 
 .block-content li.item {
-    margin: 0 0 $box-spacing;
+    margin: 0 0 $box-spacing 9px;
 }
 
 .block-content li.item:last-child {
@@ -245,14 +245,6 @@ body:not(.customer-account) .block:first-child .block-title {
             border-bottom: 1px solid $c-module-border;
         }
     }
-
-    // Appending " Menu" so that users know that the link will expand a menu
-    .sidebar .block-account,
-    .sidebar .block-cms-menu {
-        .block-title > strong span:after {
-            content: ' Menu';
-        }
-    }
 }
 
 /* -------------------------------------------- *
@@ -314,6 +306,10 @@ body:not(.customer-account) .block:first-child .block-title {
         background: $c-button-secondary-active;
         outline: none;
     }
+}
+
+.sidebar .actions button.button {
+    white-space: normal;
 }
 
 /* Primary Buttons */
@@ -406,11 +402,10 @@ a.button:hover {
     font-family: $f-stack-special;
 
     &:hover {
-        text-decoration: none !important;
+        text-decoration: none;
         color: $c-stimulus;
     }
 }
-.button2:hover span{text-decoration:none;}
 
 @include bp(max-width, $bp-medium) {
     .col2-set .buttons-set {
@@ -461,7 +456,7 @@ a.button:hover {
 }
 
 .paypal-or {
-    line-height: 40px;
+    line-height: 34px;
     margin: 0px 10px 5px;
 }
 
@@ -477,7 +472,7 @@ a.button:hover {
     display: inline;
 }
 
-@include bp(max-width, 670px) {
+@include bp(max-width, 740px) {
     .paypal-or {
         line-height: 20px;
     }
@@ -516,11 +511,11 @@ a.button:hover {
         margin: 0;
         line-height: 33px;
     }
-    // a:not(.button) {
-    //     line-height: 20px;
-    //     display: inline-block;
-    //     padding: 5px;
-    // }
+    a:not(.button) {
+        line-height: 20px;
+        display: inline-block;
+        padding: 5px;
+    }
     button.button {
         float: right;
         margin-left: 5px;
@@ -555,7 +550,7 @@ a.button:hover {
 
 .breadcrumbs {
     overflow: hidden;
-    margin: 0 0 20px;
+    margin: -15px 0 15px;
 }
 
 .breadcrumbs li {
@@ -603,7 +598,6 @@ a.button:hover {
     height: 20px;
     border: 1px solid $c-module-border-light;
     text-align: center;
-	text-decoration:none !important;
     /* Hide text */
     font: 0/0 a;
     text-shadow: none;
@@ -645,7 +639,7 @@ a.button:hover {
     }
     &:hover {
         background-color: transparent;
-        opacity: 0.8;
+        @include opacity(0.8);
     }
 }
 
@@ -1014,6 +1008,7 @@ a.button:hover {
     margin-bottom: 5px;
     padding: 7px 10px 7px 20px;
     background: $c-module-background;
+    font-size: $f-size-l;
 }
 
 .messages li li:before {
@@ -1023,7 +1018,9 @@ a.button:hover {
 }
 
 .messages .error-msg li {
+    color: $c-black;
     border-left: 5px solid $c-danger;
+    background-color: $c-danger-background;
 }
 
 .messages .error-msg li:before {
@@ -1031,7 +1028,9 @@ a.button:hover {
 }
 
 .messages .notice-msg li {
+    color: $c-black;
     border-left: 5px solid $c-warn;
+    background-color: $c-warn-background;
 }
 
 .messages .notice-msg li:before {
@@ -1039,7 +1038,9 @@ a.button:hover {
 }
 
 .messages .success-msg li {
+    color: $c-black;
     border-left: 5px solid $c-success;
+    background-color: $c-success-background;
 }
 
 .messages .success-msg li:before {
@@ -1167,7 +1168,6 @@ a.button:hover {
 
 .price-box .price,
 .price {
-    white-space: nowrap;
     font-family: $f-stack-sans;
 }
 
@@ -1178,6 +1178,7 @@ a.button:hover {
 }
 
 .price-box .minimal-price-link {
+    padding-left: 1em;
     color: $c-text-primary;
     display: block; /* We want this to show on its own line, otherwise the layout looks funky */
 
@@ -1225,6 +1226,10 @@ a.button:hover {
 
 .price-box .price-excluding-tax,
 .price-box .price-including-tax {
+    display: block;
+}
+
+span.weee {
     display: block;
 }
 
@@ -1398,6 +1403,12 @@ a.button:hover {
     position: relative;
     display: block;
     border: 1px solid $c-module-border-light;
+}
+
+@include bp (max-width, $bp-medium) {
+    body .product-img-box .product-image:hover {
+        border-color: $c-module-border-light;
+    }
 }
 
 .no-touch .product-image:hover {
@@ -1724,13 +1735,6 @@ $toolbar-icon-padding-offset: 8px;
     .limiter label {
         display: none;
     }
-	.main-container,
-	.footer-container {
-	    position: relative;
-	    max-width: $max-container-width;
-	    margin: 0 auto;
-	    padding: $trim-small/2;
-	}
 }
 
 @include bp(max-width, $bp-medium) {
@@ -1842,15 +1846,6 @@ body.customer-account .data-table {
 }
 
 /* ============================================ *
- * Widgets
- * ============================================ */
-
-.widget .pager {
-    float: none;
-    width: 100%;
-}
-
-/* ============================================ *
  * Magento Helpers
  * ============================================ */
 
@@ -1897,41 +1892,3 @@ body.customer-account .data-table {
     max-height: 50px;
     width: auto;
 }
-
-/* ============================================ *
- * Block subscribe
- * ============================================ */
-
-.block-subscribe .input-box {
-    float: left;
-    width: percentage(210px/320px);
-    padding-top: 0;
-}
-
-.block-subscribe .input-text {
-    width: 100%;
-    border-right: 0;
-    border-radius: 0;
-}
-
-.block-subscribe .block-content {
-    padding-top: 7px;
-
-    &:after {
-        @include clearfix;
-    }
-}
-
-.block-subscribe .actions {
-    float: left;
-    width: percentage(110px/320px);
-    margin: 0;
-}
-
-.block-subscribe .actions .button {
-    height: 30px;
-    line-height: 17px;
-    float: left;
-}
-.product-review .product-details{overflow:hidden;}
-.minicart-wrapper .empty{text-align:center;}

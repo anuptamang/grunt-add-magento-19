@@ -1,4 +1,3 @@
-
 /* ============================================ *
  * Checkout - One Page
  * ============================================ */
@@ -133,6 +132,11 @@
     }
 }
 
+.opc select {
+    max-width: 365px;
+    width: 100%;
+}
+
 .opc h3 {
     font-weight: 500;
 }
@@ -202,15 +206,15 @@
 
 .opc.opc-firststep-login .section:not(#opc-login) .step-title,
 .opc-block-progress-step-login {
-    @include transition(opacity, 300ms);
+    @include single-transition(opacity, 300ms);
 }
 
 .opc.opc-firststep-login .section#opc-login .step-title .number {
-    @include transition(width, 80ms);
+    @include single-transition(width, 80ms);
 }
 
 .opc.opc-firststep-login .section#opc-login .step-title h2 {
-    @include transition(margin-left, 80ms);
+    @include single-transition(margin-left, 80ms);
 }
 
 /* When a user progresses from the "Checkout Method" to "Billing Information" for the first time, the              */
@@ -275,6 +279,9 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
     }
     input.cvv {
         width: 4em !important;
+    }
+    #advice-validate-cc-exp-ccsave_expiration {
+        max-width: 130px;
     }
 
     .checkmo-list {
@@ -387,6 +394,41 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
     }
 }
 
+#checkout-review-table-wrapper {
+    clear: both; // Fix table clearing issue in Firefox
+}
+
+#review-buttons-container {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    .btn-checkout {
+        min-width: 220px;
+    }
+    .please-wait {
+        float: left;
+        margin-right: 10px;
+    }
+    .f-left {
+        float: right;
+    }
+}
+
+// Hide all but the first tr inside of thead
+@include bp(max-width, $bp-small) {
+    .linearize-table-large.checkout-review-table thead tr:nth-child(1n+2) {
+        display: none;
+    }
+}
+
+// Hide all but the first tr inside of thead
+@include bp(max-width, $bp-xsmall) {
+    .linearize-table.checkout-review-table thead tr:nth-child(1n+2) {
+        display: none;
+    }
+}
+
 /* show/hide "change" link for progress step depend on complete status
  * should be placed in .css file */
 .opc-block-progress dt.complete a,
@@ -482,6 +524,7 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
             @include clearfix;
             width: 100%;
             margin-top: $trim-small;
+            display: block;
 
             &.extra-options-container {
                 p {
@@ -544,6 +587,11 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 
 @include bp('max-width', $bp-medium) {
     .gift-message-form {
+
+        .giftmessage-area{
+            max-width: 100%;
+        }
+
         .gift-item {
             .product-img-box {
                 width: 100%;

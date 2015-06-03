@@ -49,7 +49,7 @@
  */
 
 .skip-cart .count {
-    @include border-radius(12px);
+    border-radius: 12px;
     display: inline-block;
     top: -6px;
     position: relative;
@@ -91,7 +91,7 @@
         }
 
         .count {
-            @include border-radius(0px);
+            border-radius: 0px;
             position: static;
             background: none;
             margin-left: 0px;

@@ -1,6 +1,15 @@
 // ==============================================
 // Core Application
 // ==============================================
+$breakpoints: (
+  'sm-phone': 320px,
+  'phone': 479px,
+  'lg-phone': 599px,
+  'tablet': 770px,
+  'desktop': 979px,
+  'widescreen': 1199px,
+  'xwidescreen': 1420px,
+) !default;
 
 // ----------------------------------------------
 // Browser Resets
@@ -8,12 +17,22 @@
 @import "vendor/normalize";
 @import "core/reset";
 
+@import "vendors/include-media";
+// @import "vendors/slick";
+// @import "vendors/slick-theme";
+// @import "vendors/jcf";
+
+@import "base/functions";
+@import "base/helpers";
+@import "base/mixins";
+
 // ----------------------------------------------
 // Core
 
 @import "core/common";
 @import "core/form";
 @import "core/table";
+
 
 // ----------------------------------------------
 // Vendor

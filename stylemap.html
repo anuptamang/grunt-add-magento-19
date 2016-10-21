@@ -694,53 +694,55 @@
 								</div>
 							</div>
 						</div>
-						<table class="data-table orders" id="my-orders-table">
-							<col width="1" /><col width="1" /><col/><col width="1" /><col width="1" /><col width="1" />
-							<thead>
-								<tr>
-									<th class="number">
-										Order # 
-									</th>
-									<th class="date">
-										Date
-									</th>
-									<th class="ship">
-										Ship To
-									</th>
-									<th class="total">
-										<span class="nobr">Order Total</span>
-									</th>
-									<th class="status">
-										<span class="nobr">Order Status</span>
-									</th>
-									<th class="view">
-										&nbsp;
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="number">
-										145000007
-									</td>
-									<td class="date">
-										<span class="nobr">5/19/2014</span>
-									</td>
-									<td class="ship">
-										test test2
-									</td>
-									<td class="total">
-										<span class="price">$163.61</span>
-									</td>
-									<td class="status">
-										<em>Pending</em>
-									</td>
-									<td class="a-center view">
-										<span class="nobr"><a href="sales/order/view/order_id/196/">View Order</a><span class="separator">|</span><a href="sales/order/reorder/order_id/196/" class="link-reorder">Reorder</a></span>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+						<div class="table-responsive">
+							<table class="data-table orders" id="my-orders-table">
+								<col width="1" /><col width="1" /><col/><col width="1" /><col width="1" /><col width="1" />
+								<thead>
+									<tr>
+										<th class="number">
+											Order # 
+										</th>
+										<th class="date">
+											Date
+										</th>
+										<th class="ship">
+											Ship To
+										</th>
+										<th class="total">
+											<span class="nobr">Order Total</span>
+										</th>
+										<th class="status">
+											<span class="nobr">Order Status</span>
+										</th>
+										<th class="view">
+											&nbsp;
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="number">
+											145000007
+										</td>
+										<td class="date">
+											<span class="nobr">5/19/2014</span>
+										</td>
+										<td class="ship">
+											test test2
+										</td>
+										<td class="total">
+											<span class="price">$163.61</span>
+										</td>
+										<td class="status">
+											<em>Pending</em>
+										</td>
+										<td class="a-center view">
+											<span class="nobr"><a href="sales/order/view/order_id/196/">View Order</a><span class="separator">|</span><a href="sales/order/reorder/order_id/196/" class="link-reorder">Reorder</a></span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 						<script type="text/javascript">
 							decorateTable('my-orders-table');
 						</script>
@@ -793,96 +795,100 @@
 								</div>
 							</div>
 						</div>
-						<table class="data-table" id="my-reviews-table">
-							<col width="1" /><col width="210" /><col width="1" /><col/><col width="1" />
-							<tbody>
-								<tr>
-									<td>
-										<span class="nobr">5/19/2014</span>
-									</td>
-									<td>
-										<h2 class="product-name"><a href="catalog/product/view/id/421">Elizabeth Knit Top</a></h2>
-									</td>
-									<td>
-										<div class="rating-box">
-											<div class="rating" style="width:100%;">
+						<div class="table-responsive">
+							<table class="data-table" id="my-reviews-table">
+								<col width="1" /><col width="210" /><col width="1" /><col/><col width="1" />
+								<tbody>
+									<tr>
+										<td>
+											<span class="nobr">5/19/2014</span>
+										</td>
+										<td>
+											<h2 class="product-name"><a href="catalog/product/view/id/421">Elizabeth Knit Top</a></h2>
+										</td>
+										<td>
+											<div class="rating-box">
+												<div class="rating" style="width:100%;">
+												</div>
 											</div>
-										</div>
-									</td>
-									<td>
-										Lorem ipsum dolor sit amet, consectetur adipisi...
-									</td>
-									<td>
-										<a href="review/customer/view/id/81" class="nobr">View Details</a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+										</td>
+										<td>
+											Lorem ipsum dolor sit amet, consectetur adipisi...
+										</td>
+										<td>
+											<a href="review/customer/view/id/81" class="nobr">View Details</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 					<br>
 					<h3 style="border-bottom:1px dashed #f00; border-top:1px dashed #f00; margin:0 0 15px;padding:10px 0;">13) My Wishlist</h3>
 					<form id="wishlist-view-form" action="wishlist/index/update/wishlist_id/1/" method="post">
 						<fieldset>
 							<input name="form_key" type="hidden" value="Ayv8mIPOsukRTpHD">
-							<table class="clean-table linearize-table" id="wishlist-table">
-								<thead>
-									<tr>
-										<th class="customer-wishlist-item-image"></th>
-										<th class="customer-wishlist-item-info"></th>
-										<th class="customer-wishlist-item-quantity">Quantity</th>
-										<th class="customer-wishlist-item-price">Price</th>
-										<th class="customer-wishlist-item-cart"></th>
-										<th class="customer-wishlist-item-remove"></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr id="item_160">
-										<td class="wishlist-cell0 customer-wishlist-item-image">
-											<a class="product-image" href="elizabeth-knit-top-582.html" title="Elizabeth Knit Top"><img src="images/wbk012t.jpg" width="113" height="113" alt="Elizabeth Knit Top" /></a>
-										</td>
-										<td class="wishlist-cell1 customer-wishlist-item-info">
-											<h3 class="product-name"><a href="#l" title="Elizabeth Knit Top">Elizabeth Knit Top</a></h3>
-											<div class="wishlist-sku">
-												<span>SKU wbk012c</span>
-											</div>
-											<textarea name="description[160]" rows="3" cols="5" title="Comment" placeholder="Please, enter your comments..."></textarea>
-											<div class="item-manage">
-												<button type="submit" name="do" title="Update Wishlist" class="button btn-update button-secondary">
-													<span><span>Update Wishlist</span></span>
-												</button>
-											</div>
-										</td>
-										<td class="wishlist-cell2 customer-wishlist-item-quantity" data-rwd-label="Quantity">
-											<div class="cart-cell">
-												<div class="add-to-cart-alt">
-													<input type="text" pattern="\d*" class="input-text qty validate-not-negative-number" name="qty[160]" value="1" />
+							<div class="table-responsive">
+								<table class="clean-table linearize-table" id="wishlist-table">
+									<thead>
+										<tr>
+											<th class="customer-wishlist-item-image"></th>
+											<th class="customer-wishlist-item-info"></th>
+											<th class="customer-wishlist-item-quantity">Quantity</th>
+											<th class="customer-wishlist-item-price">Price</th>
+											<th class="customer-wishlist-item-cart"></th>
+											<th class="customer-wishlist-item-remove"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr id="item_160">
+											<td class="wishlist-cell0 customer-wishlist-item-image">
+												<a class="product-image" href="elizabeth-knit-top-582.html" title="Elizabeth Knit Top"><img src="images/wbk012t.jpg" width="113" height="113" alt="Elizabeth Knit Top" /></a>
+											</td>
+											<td class="wishlist-cell1 customer-wishlist-item-info">
+												<h3 class="product-name"><a href="#l" title="Elizabeth Knit Top">Elizabeth Knit Top</a></h3>
+												<div class="wishlist-sku">
+													<span>SKU wbk012c</span>
 												</div>
-											</div>
-										</td>
-										<td class="wishlist-cell3 customer-wishlist-item-price" data-rwd-label="Price">
-											<div class="cart-cell">
-												<div class="price-box">
-													<span class="regular-price" id="product-price-421"><span class="price">$210.00</span></span>
+												<textarea name="description[160]" rows="3" cols="5" title="Comment" placeholder="Please, enter your comments..."></textarea>
+												<div class="item-manage">
+													<button type="submit" name="do" title="Update Wishlist" class="button btn-update button-secondary">
+														<span><span>Update Wishlist</span></span>
+													</button>
 												</div>
-											</div>
-										</td>
-										<td class="wishlist-cell4 customer-wishlist-item-cart">
-											<div class="cart-cell">
-												<button type="button" title="Add to Cart" onclick="addWItemToCart(160);" class="button btn-cart">
-													<span><span>Add to Cart</span></span>
-												</button>
-											</div>
-											<p>
-												<a class="link-edit button button-secondary" href="#">Edit</a>
-											</p>
-											</div>
-										</td>
-										<td class="wishlist-cell5 customer-wishlist-item-remove">
-											<a href="#" title="Remove Item" class="btn-remove btn-remove2">Remove item</a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+											</td>
+											<td class="wishlist-cell2 customer-wishlist-item-quantity" data-rwd-label="Quantity">
+												<div class="cart-cell">
+													<div class="add-to-cart-alt">
+														<input type="text" pattern="\d*" class="input-text qty validate-not-negative-number" name="qty[160]" value="1" />
+													</div>
+												</div>
+											</td>
+											<td class="wishlist-cell3 customer-wishlist-item-price" data-rwd-label="Price">
+												<div class="cart-cell">
+													<div class="price-box">
+														<span class="regular-price" id="product-price-421"><span class="price">$210.00</span></span>
+													</div>
+												</div>
+											</td>
+											<td class="wishlist-cell4 customer-wishlist-item-cart">
+												<div class="cart-cell">
+													<button type="button" title="Add to Cart" onclick="addWItemToCart(160);" class="button btn-cart">
+														<span><span>Add to Cart</span></span>
+													</button>
+												</div>
+												<p>
+													<a class="link-edit button button-secondary" href="#">Edit</a>
+												</p>
+												</div>
+											</td>
+											<td class="wishlist-cell5 customer-wishlist-item-remove">
+												<a href="#" title="Remove Item" class="btn-remove btn-remove2">Remove item</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 							<div class="buttons-set buttons-set2">
 									<button type="submit" name="save_and_share" title="Share Wishlist" class="button btn-share">
 										<span><span>Share Wishlist</span></span>

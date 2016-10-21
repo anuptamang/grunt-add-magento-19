@@ -385,6 +385,12 @@ a.button:hover {
     background: transparent;
     cursor: pointer;
     vertical-align: middle;
+
+    &:hover {
+        span {
+            text-decoration: none;
+        }
+    }
 }
 
 .button2:focus {

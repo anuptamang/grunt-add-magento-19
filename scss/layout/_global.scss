@@ -14,6 +14,10 @@ body {
     background: #FFFFFF;
 }
 
-.wrapper:after {
-    @include clearfix;
+.wrapper {
+  @extend %clearfix;
+}
+
+.table-responsive {
+  overflow: auto;
 }

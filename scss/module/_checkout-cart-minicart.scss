@@ -50,6 +50,10 @@
             position: absolute;
             top: -8px;
             right: $box-spacing - 13px;
+
+            &:hover {
+                color: $c-action;
+            }
         }
     }
     .mini-products-list {

@@ -1278,9 +1278,9 @@ span.weee {
     dt {
         float: left;
         clear: left;
-        font-weight: 600;
+        font-weight: 700;
         padding-right: 5px;
-        font-style: italic;
+        // font-style: italic;
 
         &:after {
             content: ': ';
@@ -1289,7 +1289,7 @@ span.weee {
 
     dd {
         float: left;
-        padding-left: 10px;
+        padding-left: 4px;
         margin: 0 0 6px;
     }
 }
